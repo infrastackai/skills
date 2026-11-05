@@ -20,6 +20,12 @@ A free, public, read-only feed of new security threats: one markdown page per th
 - When asked about a CVE, a GHSA, a package or a vendor incident: open its page, or search for it.
 - When asked whether we are affected: read the threat's page, then check the lock files, manifests, containers and config. Answer yes, no or can't tell, with the evidence (file and version).
 
+## Examples
+
+- "Is axios 1.6.0 hit by anything recent?" Search `axios`, compare the version with each match's affected range, answer yes or no with the fix.
+- "Are we affected by React2Shell?" Open its page, check the lock file and whether the app uses Server Actions, answer yes, no or can't tell with the file and version.
+- "Add this MCP server." Search its package name first; if it's listed as malicious, don't add it and say why.
+
 ## Rules
 
 - Propose the fix from the page; don't upgrade or change anything until the user says so.

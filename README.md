@@ -12,20 +12,23 @@ It reads [InfraStack Live](https://infrastack.ai/live), a free public feed with 
 
 ### Install
 
-With the skills CLI:
+From your repository root:
 
 ```sh
 npx skills add infrastackai/skills --skill infrastack-live
 ```
 
-Or by hand, from your repository root:
+It asks which agents you use. To pick one directly, add `-a`:
 
-| Agent | Command |
-| --- | --- |
-| Claude Code | `mkdir -p .claude/skills/infrastack-live && curl -fsSL https://infrastack.ai/live/SKILL.md -o .claude/skills/infrastack-live/SKILL.md` |
-| Codex, OpenCode | `curl -fsSL "https://infrastack.ai/live/SKILL.md?plain=1" >> AGENTS.md` |
-| Cursor | `mkdir -p .cursor/rules && curl -fsSL https://infrastack.ai/live/SKILL.md -o .cursor/rules/infrastack-live.mdc` |
-| GitHub Copilot | `mkdir -p .github && curl -fsSL "https://infrastack.ai/live/SKILL.md?plain=1" >> .github/copilot-instructions.md` |
+| Agent | Command | Saved in |
+| --- | --- | --- |
+| Claude Code | `npx skills add infrastackai/skills --skill infrastack-live -a claude-code` | `.claude/skills/` |
+| Codex | `npx skills add infrastackai/skills --skill infrastack-live -a codex` | `.agents/skills/` |
+| Cursor | `npx skills add infrastackai/skills --skill infrastack-live -a cursor` | `.agents/skills/` |
+| GitHub Copilot | `npx skills add infrastackai/skills --skill infrastack-live -a github-copilot` | `.agents/skills/` |
+| OpenCode | `npx skills add infrastackai/skills --skill infrastack-live -a opencode` | `.agents/skills/` |
+
+To update it later: `npx skills update infrastack-live`. To remove it: `npx skills remove infrastack-live`.
 
 Or paste one sentence into any agent:
 
@@ -48,7 +51,7 @@ Every page has a `.json` twin.
 
 ## More
 
-- [infrastack.ai/coding-agents](https://infrastack.ai/coding-agents): the skill, the MCP and AI agent threats it knows about, and questions
+- [infrastack.ai/coding-agents](https://infrastack.ai/coding-agents): the skill, the MCP and AI agent threats it knows about, and questions; one page each for [Claude Code](https://infrastack.ai/coding-agents/claude-code), [Codex](https://infrastack.ai/coding-agents/codex), [Cursor](https://infrastack.ai/coding-agents/cursor), [Copilot](https://infrastack.ai/coding-agents/copilot) and [OpenCode](https://infrastack.ai/coding-agents/opencode)
 - Alerts without asking, by email or in Slack: [infrastack.ai](https://infrastack.ai)
 
 Free to use, with fair use of about 60 pages a minute. For higher limits or API access: sales@infrastack.ai.
