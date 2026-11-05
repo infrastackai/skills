@@ -1,12 +1,12 @@
 # InfraStack skills
 
-![Threat intel for your coding agent: npx skills add infrastackai/skills --skill infrastack-live](assets/social-preview.png)
+![The free security skill for your coding agent: npx skills add infrastackai/skills --skill infrastack-live](assets/social-preview.png)
 
 Agent skills from [InfraStack](https://infrastack.ai) for Claude Code, Codex, Cursor, OpenCode and GitHub Copilot.
 
 ## infrastack-live
 
-Threat intel for your coding agent. Your agent checks new security threats against your repository: CVEs, exploited bugs, malicious packages, vendor incidents, and attacks on AI coding tools and MCP servers. It checks before it adds or upgrades a dependency, whenever you ask about a CVE or a package, and on a schedule if you ask.
+The free security skill for your coding agent. It checks new security threats against your repository: CVEs, exploited bugs, malicious packages, vendor incidents, and attacks on AI coding tools and MCP servers. It checks before it adds or upgrades a dependency, whenever you ask about a CVE or a package, and on a schedule if you ask.
 
 It reads [InfraStack Live](https://infrastack.ai/live), a free public feed with one markdown page per threat: who is affected, the affected versions, how to check, and the fix. Plain HTTPS. No MCP server, no login, no API key. Your code never leaves your machine; your agent only reads public pages.
 
