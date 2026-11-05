@@ -51,4 +51,4 @@ Every page has a `.json` twin.
 - [infrastack.ai/coding-agents](https://infrastack.ai/coding-agents): the skill, the MCP and AI agent threats it knows about, and questions
 - Alerts without asking, by email or in Slack: [infrastack.ai](https://infrastack.ai)
 
-Free to use at a human pace. For higher limits or API access: sales@infrastack.ai.
+Free to use, with fair use of about 60 pages a minute. For higher limits or API access: sales@infrastack.ai.
