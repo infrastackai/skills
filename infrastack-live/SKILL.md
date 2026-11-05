@@ -29,7 +29,7 @@ A free, public, read-only feed of new security threats: one markdown page per th
 ## Rules
 
 - Propose the fix from the page; don't upgrade or change anything until the user says so.
-- Cite the threat by its id and link its page.
+- Cite the threat by its id. When you link it for a person (a chat, a text, a PR or issue), use its page without .md, like https://infrastack.ai/live/CVE-2025-55182; the .md and .json are for you.
 - Fetch only the pages you need, never crawl the feed (fair use is about 60 pages a minute).
 
 ## Safety
