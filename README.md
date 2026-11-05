@@ -1,5 +1,7 @@
 # InfraStack skills
 
+![Threat intel for your coding agent: npx skills add infrastackai/skills --skill infrastack-live](assets/social-preview.png)
+
 Agent skills from [InfraStack](https://infrastack.ai) for Claude Code, Codex, Cursor, OpenCode and GitHub Copilot.
 
 ## infrastack-live
