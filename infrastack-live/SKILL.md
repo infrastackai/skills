@@ -5,7 +5,7 @@ description: Check new security threats (CVEs, exploited bugs, malicious package
 
 # InfraStack Live
 
-A free, public, read-only feed of new security threats: one markdown page per threat with who is affected, the affected versions, how to check and the fix. Plain HTTPS GET, no login, no API key.
+A free threat intelligence feed, public and read-only: one markdown page per new threat with who is affected, the affected versions, how to check and the fix. Plain HTTPS GET, no login, no API key.
 
 ## Endpoints
 
