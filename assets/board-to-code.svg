@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="InfraStack: your board's items go into your coding agent; React2Shell reaches you, line 3121 of the lock file is marked, then the fix: upgrade to 19.0.1">
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .wire { fill: none; stroke: rgba(255,255,255,.16); stroke-width: 1.5; stroke-dasharray: 4 5; }
+    .beam { fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 18 182; stroke-dashoffset: 200; opacity: 0; animation: beam 6s cubic-bezier(.45,.05,.55,.95) infinite; }
+    @keyframes beam { 0% { stroke-dashoffset: 200; opacity: 0 } 3% { opacity: 1 } 26% { stroke-dashoffset: 0; opacity: 1 } 30%, 100% { stroke-dashoffset: 0; opacity: 0 } }
+    .no { animation: dim 6s infinite; }
+    @keyframes dim { 0%, 30% { opacity: 1 } 38%, 90% { opacity: .35 } 100% { opacity: 1 } }
+    .hit { animation: hit 6s infinite; }
+    @keyframes hit { 0%, 30% { stroke: rgba(255,255,255,.16) } 38%, 90% { stroke: #ff5d6c } 100% { stroke: rgba(255,255,255,.16) } }
+    .node { animation: node 6s infinite; }
+    @keyframes node { 0%, 24% { stroke: rgba(255,255,255,.16) } 30%, 82% { stroke: #C7F747 } 92%, 100% { stroke: rgba(255,255,255,.16) } }
+    .mark { transform-box: fill-box; transform-origin: left; transform: scaleX(0); animation: mark 6s infinite; }
+    @keyframes mark { 0%, 40% { transform: scaleX(0) } 50%, 88% { transform: scaleX(1) } 96%, 100% { transform: scaleX(0) } }
+    .fix { opacity: 0; animation: fix 6s infinite; }
+    @keyframes fix { 0%, 52% { opacity: 0 } 58%, 88% { opacity: 1 } 96%, 100% { opacity: 0 } }
+    @media (prefers-reduced-motion: reduce) {
+      .beam, .no, .hit, .node, .mark, .fix { animation: none; }
+      .beam { opacity: 0 } .mark { transform: none } .fix { opacity: 1 } .no { opacity: .35 } .hit { stroke: #ff5d6c } .node { stroke: #C7F747 }
+    }
+  </style>
+  <rect width="1280" height="640" rx="16" fill="#0b0b0a"/>
+
+  <!-- the mark and the name -->
+  <rect x="64" y="52" width="40" height="40" rx="9" fill="#C7F747"/>
+  <rect x="80" y="62" width="8" height="20" rx="2" fill="#0b0b0a"/>
+  <text x="118" y="83" class="sans" font-size="30" font-weight="800" fill="#f4f4ee" letter-spacing="-0.6">InfraStack</text>
+  <text x="1216" y="80" class="mono" font-size="20" fill="#7c7a85" text-anchor="end">your board → your code</text>
+
+  <!-- the board -->
+  <g class="mono" font-size="19">
+    <g>
+      <rect class="hit" x="64" y="214" width="330" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+      <text x="88" y="243" fill="#f4f4ee">React2Shell</text>
+      <text x="372" y="243" fill="#ff5d6c" font-size="16" text-anchor="end">reaches you</text>
+    </g>
+    <g class="no">
+      <rect x="64" y="290" width="330" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+      <text x="88" y="319" fill="#b5b2bc">Brotli decoder</text>
+      <text x="372" y="319" fill="#f5a524" font-size="16" text-anchor="end">to check</text>
+    </g>
+    <g class="no">
+      <rect x="64" y="366" width="330" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+      <text x="88" y="395" fill="#b5b2bc">DMARC none</text>
+      <text x="372" y="395" fill="#f5a524" font-size="16" text-anchor="end">to check</text>
+    </g>
+  </g>
+
+  <!-- the wires into the agent, light along each -->
+  <path class="wire" d="M394 237 C 470 237, 450 313, 540 313"/>
+  <path class="wire" d="M394 313 L 540 313"/>
+  <path class="wire" d="M394 389 C 470 389, 450 313, 540 313"/>
+  <path class="beam" pathLength="200" stroke="#ff5d6c" d="M394 237 C 470 237, 450 313, 540 313"/>
+  <path class="beam" pathLength="200" stroke="#C7F747" style="animation-delay:.15s" d="M394 313 L 540 313"/>
+  <path class="beam" pathLength="200" stroke="#C7F747" style="animation-delay:.3s" d="M394 389 C 470 389, 450 313, 540 313"/>
+
+  <!-- the agent -->
+  <rect class="node" x="540" y="275" width="76" height="76" rx="15" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+  <text x="578" y="321" class="mono" font-size="22" fill="#C7F747" text-anchor="middle">&lt;/&gt;</text>
+  <path class="wire" d="M616 313 L 672 313"/>
+  <path class="beam" pathLength="200" stroke="#ff5d6c" style="animation-delay:.6s" d="M616 313 L 672 313"/>
+
+  <!-- the lock file, the line that proves it, the fix -->
+  <rect x="672" y="200" width="544" height="226" rx="12" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+  <text x="696" y="236" class="mono" font-size="17" fill="#7c7a85">apps/web/package-lock.json</text>
+  <line x1="672" y1="254" x2="1216" y2="254" stroke="rgba(255,255,255,.08)"/>
+  <rect class="mark" x="673" y="324" width="542" height="34" fill="rgba(255,93,108,.16)"/>
+  <rect class="mark" x="673" y="324" width="3" height="34" fill="#ff5d6c"/>
+  <g class="mono" font-size="18">
+    <text x="696" y="282" fill="#49474e">3119</text><text x="756" y="282" fill="#b5b2bc">"react-server-dom-webpack": {</text>
+    <text x="696" y="312" fill="#49474e">3120</text><text x="756" y="312" fill="#b5b2bc">  "resolved": "…-19.0.0.tgz",</text>
+    <text x="696" y="347" fill="#49474e">3121</text><text x="756" y="347" fill="#f4f4ee">  "version": "19.0.0",</text>
+    <text x="696" y="380" fill="#49474e">3122</text><text x="756" y="380" fill="#b5b2bc">  "dev": false</text>
+    <text x="696" y="410" fill="#49474e">3123</text><text x="756" y="410" fill="#b5b2bc">},</text>
+  </g>
+  <text class="fix mono" x="672" y="472" font-size="22" fill="#C7F747">→ upgrade to 19.0.1</text>
+
+  <!-- the install, along the foot -->
+  <text x="64" y="572" class="mono" font-size="22" fill="#C7F747">$</text>
+  <text x="88" y="572" class="mono" font-size="22" fill="#e6e6dd">npx skills add infrastackai/skills</text>
+  <text x="1216" y="572" class="mono" font-size="17" fill="#7c7a85" text-anchor="end">then ask "what should we fix first?"</text>
+</svg>

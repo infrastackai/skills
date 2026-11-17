@@ -1,6 +1,6 @@
 # InfraStack skills
 
-![InfraStack: give your coding agent a security watchdog. npx skills add infrastackai/skills](assets/social-preview.png)
+![InfraStack: your board's items go into your coding agent; the one that reaches you is marked in the lock file, then the fix](assets/board-to-code.svg)
 
 Agent skills from [InfraStack](https://infrastack.ai) for Claude Code, Codex, Cursor, OpenCode and GitHub Copilot.
 

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-label="InfraStack: one command, npx skills add infrastackai/skills, installs the skill in Claude Code, Codex, Cursor, Copilot and OpenCode">
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .wire { fill: none; stroke: rgba(255,255,255,.16); stroke-width: 1.5; stroke-dasharray: 4 5; }
+    .beam { fill: none; stroke: #C7F747; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 18 182; stroke-dashoffset: 200; opacity: 0; animation: beam 4s cubic-bezier(.45,.05,.55,.95) infinite; }
+    @keyframes beam { 0% { stroke-dashoffset: 200; opacity: 0 } 4% { opacity: 1 } 30% { stroke-dashoffset: 0; opacity: 1 } 34%, 100% { stroke-dashoffset: 0; opacity: 0 } }
+    .ag rect { animation: lit 4s infinite; }
+    .ag text { animation: txt 4s infinite; }
+    @keyframes lit { 0%, 27% { stroke: rgba(255,255,255,.16) } 32%, 80% { stroke: #C7F747 } 92%, 100% { stroke: rgba(255,255,255,.16) } }
+    @keyframes txt { 0%, 27% { fill: #b5b2bc } 32%, 80% { fill: #f4f4ee } 92%, 100% { fill: #b5b2bc } }
+    @media (prefers-reduced-motion: reduce) {
+      .beam, .ag rect, .ag text { animation: none; }
+      .ag rect { stroke: #C7F747 } .ag text { fill: #f4f4ee }
+    }
+  </style>
+  <rect width="1280" height="640" rx="16" fill="#0b0b0a"/>
+
+  <rect x="64" y="52" width="40" height="40" rx="9" fill="#C7F747"/>
+  <rect x="80" y="62" width="8" height="20" rx="2" fill="#0b0b0a"/>
+  <text x="118" y="83" class="sans" font-size="30" font-weight="800" fill="#f4f4ee" letter-spacing="-0.6">InfraStack</text>
+  <text x="1216" y="80" class="mono" font-size="20" fill="#7c7a85" text-anchor="end">infrastackai/skills</text>
+
+  <!-- the one command -->
+  <rect x="64" y="290" width="508" height="56" rx="28" fill="#141315" stroke="rgba(255,255,255,.16)"/>
+  <text x="90" y="324" class="mono" font-size="19" fill="#49474e">$</text>
+  <text x="112" y="324" class="mono" font-size="19" fill="#f4f4ee">npx <tspan fill="#C7F747">skills add infrastackai/skills</tspan></text>
+
+  <!-- the wires out to each agent, light along each in turn -->
+  <g>
+    <path class="wire" d="M572 318 C 726 318, 726 164, 880 164"/>
+    <path class="wire" d="M572 318 C 726 318, 726 241, 880 241"/>
+    <path class="wire" d="M572 318 L 880 318"/>
+    <path class="wire" d="M572 318 C 726 318, 726 395, 880 395"/>
+    <path class="wire" d="M572 318 C 726 318, 726 472, 880 472"/>
+    <path class="beam" pathLength="200" d="M572 318 C 726 318, 726 164, 880 164"/>
+    <path class="beam" pathLength="200" style="animation-delay:.12s" d="M572 318 C 726 318, 726 241, 880 241"/>
+    <path class="beam" pathLength="200" style="animation-delay:.24s" d="M572 318 L 880 318"/>
+    <path class="beam" pathLength="200" style="animation-delay:.36s" d="M572 318 C 726 318, 726 395, 880 395"/>
+    <path class="beam" pathLength="200" style="animation-delay:.48s" d="M572 318 C 726 318, 726 472, 880 472"/>
+  </g>
+
+  <g class="mono" font-size="20">
+    <g class="ag"><rect x="880" y="141" width="220" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)"/><text x="906" y="171" fill="#b5b2bc">Claude Code</text></g>
+    <g class="ag" style="--d:.12s"><rect x="880" y="218" width="220" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)" style="animation-delay:.12s"/><text x="906" y="248" fill="#b5b2bc" style="animation-delay:.12s">Codex</text></g>
+    <g class="ag"><rect x="880" y="295" width="220" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)" style="animation-delay:.24s"/><text x="906" y="325" fill="#b5b2bc" style="animation-delay:.24s">Cursor</text></g>
+    <g class="ag"><rect x="880" y="372" width="220" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)" style="animation-delay:.36s"/><text x="906" y="402" fill="#b5b2bc" style="animation-delay:.36s">Copilot</text></g>
+    <g class="ag"><rect x="880" y="449" width="220" height="46" rx="23" fill="#141315" stroke="rgba(255,255,255,.16)" style="animation-delay:.48s"/><text x="906" y="479" fill="#b5b2bc" style="animation-delay:.48s">OpenCode</text></g>
+  </g>
+
+  <text x="64" y="572" class="sans" font-size="26" font-weight="600" fill="#f4f4ee" letter-spacing="-0.4">Give your coding agent a security watchdog.</text>
+  <text x="1216" y="572" class="mono" font-size="17" fill="#7c7a85" text-anchor="end">then ask "what should we fix first?"</text>
+</svg>
