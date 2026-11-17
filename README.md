@@ -1,6 +1,6 @@
 # InfraStack skills
 
-![Give your coding agent a security watchdog: npx skills add infrastackai/skills --skill infrastack-live](assets/social-preview.png)
+![InfraStack: give your coding agent a security watchdog. npx skills add infrastackai/skills](assets/social-preview.png)
 
 Agent skills from [InfraStack](https://infrastack.ai) for Claude Code, Codex, Cursor, OpenCode and GitHub Copilot.
 
