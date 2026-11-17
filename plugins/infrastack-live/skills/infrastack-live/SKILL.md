@@ -2,7 +2,7 @@
 name: infrastack-live
 description: Check new security threats (CVEs, exploited bugs, malicious packages, vendor incidents, attacks on AI coding tools and MCP servers) against this repository with InfraStack Live. Use before adding or upgrading a dependency, when asked about a CVE, package or vendor incident, when asked whether we are affected by a threat, when asked what to fix or what InfraStack found on our board, and when someone asks whether a breach, a phishing email or a suspicious site touches them.
 metadata:
-  version: "2026.11.17"
+  version: "2026.11.18"
 ---
 
 # InfraStack Live
@@ -19,7 +19,7 @@ To sign in, before your first read or when a page answers 401 ("Sign in to read 
 1. `curl -s -X POST https://infrastack.ai/api/agent/login/start -H 'content-type: application/json' -d '{"client":"<your name, like Claude Code or Codex>"}'`. Keep `device_code` to yourself.
 2. Show the user `user_code` and open `verification_uri_complete` in their browser (`open` on macOS, `xdg-open` on Linux, `start` on Windows). Ask them to sign in and allow it if the code matches.
 3. Every `interval` seconds, `curl -s -X POST https://infrastack.ai/api/agent/login/poll -H 'content-type: application/json' -d '{"device_code":"<device_code>"}'` until it answers a `token` (`authorization_pending` means wait; `access_denied` or `expired_token` means stop and tell the user). Ten minutes at most.
-4. Save the token: `mkdir -p ~/.config/infrastack && umask 077 && printf %s "<token>" > ~/.config/infrastack/token`. It lasts 90 days from its last use. Then tell the user only that the sign-in worked: not the token, not where it is kept.
+4. Save the token: `mkdir -p ~/.config/infrastack && umask 077 && printf %s "<token>" > ~/.config/infrastack/token`. It lasts 90 days from its last use. Then tell the user the sign-in worked and that the key is saved in `~/.config/infrastack/token` (delete that file, or sign it out on the dashboard, to sign out). Never print the token itself.
 
 A 429 answer means a limit is reached: tell the user, don't retry in a loop.
 
