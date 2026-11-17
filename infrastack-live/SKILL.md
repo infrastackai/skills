@@ -1,6 +1,8 @@
 ---
 name: infrastack-live
 description: Check new security threats (CVEs, exploited bugs, malicious packages, vendor incidents, attacks on AI coding tools and MCP servers) against this repository with InfraStack Live. Use before adding or upgrading a dependency, when asked about a CVE, package or vendor incident, when asked whether we are affected by a threat, when asked what to fix or what InfraStack found on our board, and when someone asks whether a breach, a phishing email or a suspicious site touches them.
+metadata:
+  version: "2026.11.17"
 ---
 
 # InfraStack Live

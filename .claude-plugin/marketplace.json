@@ -1,0 +1,12 @@
+{
+  "name": "infrastack",
+  "description": "InfraStack's security skills for coding agents",
+  "owner": { "name": "InfraStack", "url": "https://infrastack.ai" },
+  "plugins": [
+    {
+      "name": "infrastack-live",
+      "source": "./plugins/infrastack-live",
+      "description": "Check your InfraStack board and the latest threats (CVEs, malicious packages, MCP and AI tool vulnerabilities) against your repo, and fix what reaches you"
+    }
+  ]
+}

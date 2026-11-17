@@ -1,0 +1,20 @@
+{
+  "name": "infrastack-live",
+  "version": "2026.11.17",
+  "description": "Check your InfraStack board and the latest threats (CVEs, malicious packages, MCP and AI tool vulnerabilities) against your repo, and fix what reaches you",
+  "author": {
+    "name": "InfraStack",
+    "url": "https://infrastack.ai"
+  },
+  "homepage": "https://infrastack.ai/coding-agents",
+  "repository": "https://github.com/infrastackai/skills",
+  "keywords": [
+    "security",
+    "cve",
+    "vulnerabilities",
+    "supply-chain",
+    "malicious-packages",
+    "mcp",
+    "threat-intelligence"
+  ]
+}
