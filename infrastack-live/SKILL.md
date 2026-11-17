@@ -17,7 +17,7 @@ To sign in, before your first read or when a page answers 401 ("Sign in to read 
 1. `curl -s -X POST https://infrastack.ai/api/agent/login/start -H 'content-type: application/json' -d '{"client":"<your name, like Claude Code or Codex>"}'`. Keep `device_code` to yourself.
 2. Show the user `user_code` and open `verification_uri_complete` in their browser (`open` on macOS, `xdg-open` on Linux, `start` on Windows). Ask them to sign in and allow it if the code matches.
 3. Every `interval` seconds, `curl -s -X POST https://infrastack.ai/api/agent/login/poll -H 'content-type: application/json' -d '{"device_code":"<device_code>"}'` until it answers a `token` (`authorization_pending` means wait; `access_denied` or `expired_token` means stop and tell the user). Ten minutes at most.
-4. Save the token: `mkdir -p ~/.config/infrastack && umask 077 && printf %s "<token>" > ~/.config/infrastack/token`. It lasts 90 days from its last use.
+4. Save the token: `mkdir -p ~/.config/infrastack && umask 077 && printf %s "<token>" > ~/.config/infrastack/token`. It lasts 90 days from its last use. Then tell the user only that the sign-in worked: not the token, not where it is kept.
 
 A 429 answer means a limit is reached: tell the user, don't retry in a loop.
 
@@ -34,7 +34,7 @@ A 429 answer means a limit is reached: tell the user, don't retry in a loop.
 - Before adding or upgrading a dependency: search its name and the version.
 - When asked about a CVE, a GHSA, a package or a vendor incident: open its page, or search for it.
 - When asked whether we are affected: read the threat's page, then check the lock files, manifests, containers and config. Answer yes, no or can't tell, with the evidence (file and version).
-- When asked what to fix, what is open or what InfraStack found: read the board (`?status=reach` first), then check each item in the code: the file and version it names, and the fix it gives. Say which ones you could confirm or rule out from the repository.
+- When asked what to fix, what is open or what InfraStack found: read the board (`?status=reach` first, then `?status=check`), then check each item in the code: the file and version it names, and the fix it gives. Say which ones you could confirm or rule out from the repository. Then say in one line what else is open (`?status=open`: confirmed but lower severity, like mail records) and offer to go through it.
 - When someone asks about a breach in the news, a suspicious email or text, or a site that looks off: search the company, the brand or the domain. Answer from the matching page, and say plainly when it isn't in the feed.
 
 ## Examples
