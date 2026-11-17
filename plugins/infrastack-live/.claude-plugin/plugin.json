@@ -16,5 +16,7 @@
     "malicious-packages",
     "mcp",
     "threat-intelligence"
-  ]
+  ],
+  "license": "MIT",
+  "icon": ".claude-plugin/icon.png"
 }
