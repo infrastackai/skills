@@ -1,7 +1,7 @@
 {
   "name": "infrastack-live",
   "displayName": "InfraStack Live",
-  "version": "2026.11.18",
+  "version": "2026.11.19",
   "description": "Check your InfraStack board and the latest threats (CVEs, malicious packages, MCP and AI tool vulnerabilities) against your repo, and fix what reaches you",
   "author": {
     "name": "InfraStack",
